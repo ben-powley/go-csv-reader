@@ -6,7 +6,8 @@ import (
 	"os"
 )
 
-// ReadCSVFiles reads an array of filenames and returns a two-dimensional array of results from the CSV.
+// ReadCSVFiles reads an array of filenames and combines them to return
+// a two-dimensional array of results from the CSV.
 func ReadCSVFiles(filenames []string, skipHeaders bool) ([][]string, error) {
 	dataList := [][]string{}
 
@@ -37,6 +38,7 @@ func ReadCSVFiles(filenames []string, skipHeaders bool) ([][]string, error) {
 	return dataList, nil
 }
 
+// readCSVlines is an internal function used for reading individual lines of a CSV file
 func readCSVLines(filename string) ([][]string, error) {
 	file, fileErr := os.Open(filename)
 
