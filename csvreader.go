@@ -1,3 +1,4 @@
+// Package csvreader provides utility methods for easily reading a list of CSV files.
 package csvreader
 
 import (
@@ -5,6 +6,7 @@ import (
 	"os"
 )
 
+// ReadCSVFiles reads an array of filenames and returns a two-dimensional array of results from the CSV.
 func ReadCSVFiles(filenames []string, skipHeaders bool) ([][]string, error) {
 	dataList := [][]string{}
 
